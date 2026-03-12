@@ -1,0 +1,11 @@
+[package]
+name = "loco-logger-localtime"
+version = "0.1.0"
+edition = "2021"
+description = "Loco.rs 自定义日志初始化器，使用 tracing-appender-localtime 实现本地时间日志轮转"
+publish = false
+
+[dependencies]
+loco-rs = { version = "0.16" }
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json", "local-time"] }
+tracing-appender = { package = "tracing-appender-localtime", version = "0.2", default-features = false }
